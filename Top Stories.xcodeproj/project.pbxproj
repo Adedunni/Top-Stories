@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B311964B22D4E89000B18AD0 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B311964A22D4E89000B18AD0 /* SwiftyJSON.swift */; };
 		B3D660D722D4E53F00F37013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D660D622D4E53F00F37013 /* AppDelegate.swift */; };
 		B3D660D922D4E53F00F37013 /* SourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D660D822D4E53F00F37013 /* SourcesViewController.swift */; };
 		B3D660DC22D4E53F00F37013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D660DA22D4E53F00F37013 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B311964A22D4E89000B18AD0 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		B3D660D322D4E53F00F37013 /* Top Stories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Stories.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D660D622D4E53F00F37013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3D660D822D4E53F00F37013 /* SourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				B3D660DD22D4E54200F37013 /* Assets.xcassets */,
 				B3D660DF22D4E54200F37013 /* LaunchScreen.storyboard */,
 				B3D660E222D4E54200F37013 /* Info.plist */,
+				B311964A22D4E89000B18AD0 /* SwiftyJSON.swift */,
 			);
 			path = "Top Stories";
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B311964B22D4E89000B18AD0 /* SwiftyJSON.swift in Sources */,
 				B3D660D922D4E53F00F37013 /* SourcesViewController.swift in Sources */,
 				B3D660D722D4E53F00F37013 /* AppDelegate.swift in Sources */,
 			);
