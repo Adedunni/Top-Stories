@@ -17,6 +17,9 @@ class SourcesViewController: UITableViewController {
         self.title = "News Sources"
         let query =
            "https://newsapi.org/v1/sources?language=en&country=us&apiKey=\(apiKey)"
+        DispatchQueue.global(qos: .userInitiated).async {
+            [unowned self] in
+        }
         if let url = URL(string: query) {
             if let data = try? Data(contentsOf: url){
                 let json = try! JSON(data: data)
@@ -26,7 +29,7 @@ class SourcesViewController: UITableViewController {
                 }
             }
         }
-        loadError()
+        self.loadError()
     }
     
     func parse(json: JSON) {
@@ -37,13 +40,21 @@ class SourcesViewController: UITableViewController {
             let source = ["id": id, "name": name, "description": description ]
             sources.append(source)
         }
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            [unowned self] in
+            self.tableView.reloadData()
+        }
     }
+    
     func  loadError(){
-        let alert = UIAlertController(title: "Loading Error", message: "There was a problem loadin the news feed ", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert,animated: true, completion: nil)
+        DispatchQueue.global(qos: .userInitiated).async {
+            [unowned self] in
+            let alert = UIAlertController(title: "Loading Error", message: "There was a problem loadin the news feed ", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert,animated: true, completion: nil)
+        }
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sources.count
     }
